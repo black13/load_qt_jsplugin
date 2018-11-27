@@ -42,6 +42,8 @@ int main(int argc, char *argv[])
     Generic_Interface *commonClass = (Generic_Interface*)pluginIfc();
     commonClass->Abstract(&engine);
     engine.evaluate("plugin.intProperty = 2;");
+    engine.evaluate("plugin.base.intProperty = 2;");
+    engine.evaluate("plugin.base.write();");
     //return app.exec();
 }
 
